@@ -34,7 +34,7 @@ export default class TodoList extends React.Component{
   }
 
   addTodo = () => {
-    const trimmedText = this.newTodoText.trim()
+    const trimmedText = this.state.newTodoText.trim()
     if (trimmedText) {
       this.setState({
         todos: this.state.todos.concat([{
