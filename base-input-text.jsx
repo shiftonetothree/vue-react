@@ -27,7 +27,7 @@ export default class BaseInputText extends React.Component {
           className='input'
           value={this.props.value}
           {...this.listeners()}
-        >
+        />
       </Template>
     );
   }
