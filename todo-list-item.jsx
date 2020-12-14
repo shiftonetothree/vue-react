@@ -11,8 +11,8 @@ export default class TodoListItem extends React.Component{
     return (
       <Template>
         <li>
-          { props.todo.text }
-          <button onClick={()=>remove(props.todo.id)}>
+          { this.props.todo.text }
+          <button onClick={()=>this.props.remove(this.props.todo.id)}>
             X
           </button>
         </li>
