@@ -60,7 +60,7 @@ export default class TodoList extends React.Component{
         <div>
           <BaseInputText 
             value={this.state.newTodoText}
-            placeholder="New todo"
+            placeholder='New todo'
             onChange={this.setNeTodoText}
             onEnter={this.addTodo}
           />

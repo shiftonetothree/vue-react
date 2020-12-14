@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components';
-const blue = "blue";
+const blue = 'blue';
 import '../variables.scss';
 
 const Template = styled.template`
@@ -23,8 +23,8 @@ export default class BaseInputText extends React.Component {
     return (
       <Template>
         <input
-          type="text"
-          className="input"
+          type='text'
+          className='input'
           value={this.props.value}
           {...this.listeners()}
         >
