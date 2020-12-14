@@ -29,7 +29,7 @@ export default class TodoList extends React.Component{
     ]
   }
 
-  setNeTodoText = (value) => {
+  setNeTodoText = (newTodoText) => {
     this.setState({ newTodoText });
   }
 
