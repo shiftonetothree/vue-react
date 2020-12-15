@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import StyleButton from './style-button.jsx';
 
 const Template = styled.template`
-  button{
-    color: red;
-  }
+.remove-button{
+  color: orangered;
+}
 `
 export default class TodoListItem extends React.Component{
   render(){
@@ -12,9 +13,12 @@ export default class TodoListItem extends React.Component{
       <Template>
         <li>
           { this.props.todo.text }
-          <button onClick={()=>this.props.remove(this.props.todo.id)}>
+          <StyleButton
+            className={"remove-button"}
+            onClick={()=>this.props.remove(this.props.todo.id)}
+          >
             X
-          </button>
+          </StyleButton>
         </li>
       </Template>
     )

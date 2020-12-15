@@ -1,10 +1,12 @@
 <style lang="scss" scoped>
-button{
-  color: red;
+.remove-button{
+  color: orangered;
 }
 </style>
 <script>
+import StyleButton from './style-button.vue'
 export default {
+  components: { StyleButton },
   props: {
     todo: {
       type: Object,
@@ -16,9 +18,12 @@ export default {
 <template>
   <li>
     {{ todo.text }}
-    <button @click="$emit('remove', todo.id)">
+    <style-button
+      class="remove-button"
+      @click="$emit('remove', todo.id)"
+    >
       X
-    </button>
+    </style-button>
   </li>
 </template>
 
