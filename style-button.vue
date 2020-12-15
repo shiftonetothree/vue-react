@@ -9,11 +9,6 @@ export default {
     return {
 			fontSize: 12,
     }
-  },
-  method:{
-    abc(){
-      $attrs.class
-    }
   }
 }
 </script>
