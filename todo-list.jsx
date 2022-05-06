@@ -29,7 +29,7 @@ export default class TodoList extends React.Component{
     ]
   }
 
-  setNeTodoText = (newTodoText) => {
+  setNewTodoText = (newTodoText) => {
     this.setState({ newTodoText });
   }
 
@@ -60,11 +60,11 @@ export default class TodoList extends React.Component{
         <div>
           <BaseInputText 
             value={this.state.newTodoText}
+            onChange={this.setNewTodoText}
             placeholder='New todo'
-            onChange={this.setNeTodoText}
             onEnter={this.addTodo}
           />
-          {todos.length && 
+          {todos.length ? 
             <ul>
               {this.state.todos.map(todo=>
                 <TodoListItem
@@ -74,10 +74,12 @@ export default class TodoList extends React.Component{
                 />
               )}
             </ul>
+            :
+            <p v-else>
+              Nothing left in the list. Add a new todo in the input above.
+            </p>
           }
-          <p v-else>
-            Nothing left in the list. Add a new todo in the input above.
-          </p>
+          
         </div>
       </Template>
     )
